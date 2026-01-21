@@ -6,6 +6,9 @@ import { ButtonModule } from "primeng/button";
 import { CardModule } from "primeng/card";
 import { DataViewModule } from 'primeng/dataview';
 import { DialogModule } from 'primeng/dialog';
+import { TagModule } from "primeng/tag";
+import { CartService } from "../../../shared/services/cart.service";
+import {NgIf} from "@angular/common";
 
 const emptyProduct: Product = {
   id: 0,
@@ -29,17 +32,18 @@ const emptyProduct: Product = {
   templateUrl: "./product-list.component.html",
   styleUrls: ["./product-list.component.scss"],
   standalone: true,
-  imports: [DataViewModule, CardModule, ButtonModule, DialogModule, ProductFormComponent],
+  imports: [DataViewModule, CardModule, ButtonModule, DialogModule, ProductFormComponent, TagModule, NgIf],
 })
 export class ProductListComponent implements OnInit {
   private readonly productsService = inject(ProductsService);
-
+  public readonly cartService = inject(CartService);
   public readonly products = this.productsService.products;
+  public readonly editedProduct = signal<Product>(emptyProduct);
 
   public isDialogVisible = false;
   public isCreation = false;
-  public readonly editedProduct = signal<Product>(emptyProduct);
-
+  public selectedProduct: any = null;
+  public isDetailsVisible: boolean = false;
   ngOnInit() {
     this.productsService.get().subscribe();
   }
@@ -75,5 +79,23 @@ export class ProductListComponent implements OnInit {
 
   private closeDialog() {
     this.isDialogVisible = false;
+  }
+
+  public getSeverity(product: any): "success" | "secondary" | "info" | "warning" | "danger" | "contrast" {
+    switch (product.inventoryStatus) {
+      case 'INSTOCK':
+        return 'success';
+      case 'LOWSTOCK':
+        return 'warning';
+      case 'OUTOFSTOCK':
+        return 'danger';
+      default:
+        return 'info';
+    }
+  }
+
+  onShowDetails(product: any) {
+    this.selectedProduct = product;
+    this.isDetailsVisible = true;
   }
 }
