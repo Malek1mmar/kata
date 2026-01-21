@@ -13,6 +13,7 @@ export const APP_ROUTES: Routes = [
   },
   {
     path: 'contact',
-    loadComponent: () => import('./contact/features/contact-form/contact.component').then(m => m.ContactComponent)  },
+    loadComponent: () => import('./contact/features/contact-form/contact.component').then(m => m.ContactComponent)
+  },
   { path: "", redirectTo: "home", pathMatch: "full" },
 ];
