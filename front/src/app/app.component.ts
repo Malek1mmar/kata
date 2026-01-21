@@ -6,9 +6,9 @@ import { SplitterModule } from 'primeng/splitter';
 import { ToolbarModule } from 'primeng/toolbar';
 import { PanelMenuComponent } from "./shared/ui/panel-menu/panel-menu.component";
 import { CartService } from "./shared/services/cart.service";
-import {OverlayPanelModule} from "primeng/overlaypanel";
-import {Button} from "primeng/button";
-import {BadgeModule} from "primeng/badge";
+import { OverlayPanelModule } from "primeng/overlaypanel";
+import { Button } from "primeng/button";
+import { BadgeModule } from "primeng/badge";
 
 @Component({
   selector: "app-root",

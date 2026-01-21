@@ -11,5 +11,8 @@ export const APP_ROUTES: Routes = [
     loadChildren: () =>
       import("./products/products.routes").then((m) => m.PRODUCTS_ROUTES)
   },
+  {
+    path: 'contact',
+    loadComponent: () => import('./contact/features/contact-form/contact.component').then(m => m.ContactComponent)  },
   { path: "", redirectTo: "home", pathMatch: "full" },
 ];

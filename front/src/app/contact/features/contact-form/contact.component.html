@@ -1,0 +1,32 @@
+
+<div class="p-4 card shadow-1" style="max-width: 600px; margin: 2rem auto;">
+  <h2 class="text-center">Contact</h2>
+
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="flex flex-column gap-3">
+
+    <div class="flex flex-column gap-1">
+      <label for="email">Email</label>
+      <input pInputText id="email" formControlName="email" placeholder="votre@email.com" />
+      @if (contactForm.get('email')?.invalid && contactForm.get('email')?.touched) {
+      <small class="p-error">Un email valide est requis.</small>
+      }
+    </div>
+
+    <div class="flex flex-column gap-1">
+      <label for="message">Message</label>
+      <textarea pInputTextarea id="message" formControlName="message" rows="5" [autoResize]="true"></textarea>
+      <div class="flex justify-content-between">
+        @if (contactForm.get('message')?.invalid && contactForm.get('message')?.touched) {
+        <small class="p-error">Le message est requis (max 300 caractères).</small>
+        }
+        <small [ngClass]="{'p-error': messageLength > 300}" class="ml-auto">
+          {{ messageLength }} / 300
+        </small>
+      </div>
+    </div>
+
+    <p-button label="Envoyer" icon="pi pi-send" type="submit" [disabled]="contactForm.invalid"></p-button>
+  </form>
+</div>
+
+<p-toast></p-toast>
