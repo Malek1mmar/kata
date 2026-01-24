@@ -1,6 +1,7 @@
 package com.kata.demo.domain.model;
 
-import lombok.Getter;
+import java.util.ArrayList;
+import java.util.List;
 
 public class User {
   private Long id;
@@ -8,6 +9,9 @@ public class User {
   private String firstname;
   private String email;
   private String password;
+  private List<Product> cart = new ArrayList<>();
+  private List<Product> wishlist = new ArrayList<>();
+
 
   public User(Long id, String username, String firstname, String email, String password) {
     this.id = id;
@@ -35,6 +39,13 @@ public class User {
 
   public String getPassword() {
     return password;
+  }
+
+  public List<Product> getCart() {
+    return cart;
+  }
+  public List<Product> getWishlist() {
+    return wishlist;
   }
 
   public User() {}

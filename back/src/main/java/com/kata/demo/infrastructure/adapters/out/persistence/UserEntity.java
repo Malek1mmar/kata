@@ -2,10 +2,16 @@ package com.kata.demo.infrastructure.adapters.out.persistence;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "users")
@@ -43,4 +49,26 @@ public class UserEntity {
   public void setEmail(String email) { this.email = email; }
   public String getPassword() { return password; }
   public void setPassword(String password) { this.password = password; }
+
+  @ManyToMany(fetch = FetchType.EAGER)
+  @JoinTable(
+      name = "user_cart",
+      joinColumns = @JoinColumn(name = "user_id"),
+      inverseJoinColumns = @JoinColumn(name = "product_id")
+  )
+  private List<ProductEntity> cart = new ArrayList<>();
+
+  @ManyToMany(fetch = FetchType.EAGER)
+  @JoinTable(
+      name = "user_wishlist",
+      joinColumns = @JoinColumn(name = "user_id"),
+      inverseJoinColumns = @JoinColumn(name = "product_id")
+  )
+  private List<ProductEntity> wishlist = new ArrayList<>();
+
+  public List<ProductEntity> getCart() { return cart; }
+  public void setCart(List<ProductEntity> cart) { this.cart = cart; }
+
+  public List<ProductEntity> getWishlist() { return wishlist; }
+  public void setWishlist(List<ProductEntity> wishlist) { this.wishlist = wishlist; }
 }
