@@ -6,17 +6,9 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 @Entity
 @Table(name = "users")
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
 public class UserEntity {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -36,6 +28,11 @@ public class UserEntity {
     this.email = email;
     this.password = password;
   }
+
+  public UserEntity() {
+
+  }
+
   public Long getId() { return id; }
   public void setId(Long id) { this.id = id; }
   public String getUsername() { return username; }
