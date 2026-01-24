@@ -5,11 +5,13 @@ import { catchError, Observable, of, tap } from "rxjs";
 
 @Injectable({
     providedIn: "root"
-}) export class ProductsService {
+})
+export class ProductsService {
 
     private readonly http = inject(HttpClient);
-    private readonly path = "/api/products";
-    
+    private readonly API_URL = 'http://localhost:8080';
+
+    private readonly path = `${this.API_URL}/products`;
     private readonly _products = signal<Product[]>([]);
 
     public readonly products = this._products.asReadonly();
