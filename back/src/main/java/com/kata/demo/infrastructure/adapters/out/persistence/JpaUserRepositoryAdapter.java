@@ -16,7 +16,7 @@ public class JpaUserRepositoryAdapter implements UserRepositoryPort {
   @Override
   public User save(User domainUser) {
     UserEntity entity = new UserEntity(
-        null,
+        domainUser.getId(),
         domainUser.getUsername(),
         domainUser.getFirstname(),
         domainUser.getEmail(),

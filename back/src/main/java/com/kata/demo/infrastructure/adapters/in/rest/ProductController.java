@@ -2,12 +2,9 @@ package com.kata.demo.infrastructure.adapters.in.rest;
 
 import com.kata.demo.domain.model.Product;
 import com.kata.demo.domain.ports.in.ManageProductUseCase;
-import com.kata.demo.infrastructure.adapters.out.persistence.ProductEntity;
-import com.kata.demo.application.service.ProductService;
 import java.util.List;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;

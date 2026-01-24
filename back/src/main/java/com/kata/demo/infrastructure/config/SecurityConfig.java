@@ -27,6 +27,7 @@ public class SecurityConfig {
         .authorizeHttpRequests(auth -> auth
             .requestMatchers("/account/**", "/token/**").permitAll()
             .requestMatchers(HttpMethod.GET, "/products/**").permitAll()
+            .requestMatchers("/cart/**", "/wishlist/**").authenticated()
             .anyRequest().authenticated()
         )
         .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);

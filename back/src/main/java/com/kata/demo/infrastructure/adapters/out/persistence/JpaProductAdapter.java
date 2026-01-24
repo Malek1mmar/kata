@@ -41,7 +41,11 @@ public class JpaProductAdapter implements ProductRepositoryPort {
 
 
   private Product toDomain(ProductEntity e) {
-    return new Product();
+    Product p = new Product();
+    p.setId(e.getId());
+    p.setCode(e.getCode());
+    p.setName(e.getName());
+    return p;
   }
 
   private ProductEntity toEntity(Product p) {
