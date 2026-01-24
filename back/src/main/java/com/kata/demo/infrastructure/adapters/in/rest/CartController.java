@@ -28,9 +28,9 @@ public class CartController {
   }
 
   @PostMapping("/cart/{productId}")
-  public ResponseEntity<Void> addToCart(@PathVariable Long productId) {
+  public ResponseEntity<List<Product>> addToCart(@PathVariable Long productId) {
     cartUseCase.addToCart(productId);
-    return ResponseEntity.ok().build();
+    return ResponseEntity.ok(cartUseCase.getCart());
   }
 
   @DeleteMapping("/cart/{productId}")

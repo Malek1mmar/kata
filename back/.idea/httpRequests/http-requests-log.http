@@ -1,5 +1,5 @@
-POST http://localhost:8080/cart/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjU2OTc1LCJleHAiOjE3NjkzNDMzNzV9.ERwz1WjkXctHLqWDO6xb9kRAGTl3JT3KTfLuv7T-Obo
+POST http://localhost:8080/wishlist/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjY4NDUyLCJleHAiOjE3NjkzNTQ4NTJ9.tfWuRRgSHRhnQR68Z0I34LMg7Fwiap2a7W8q2E1o0-4
 Content-Length: 0
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
@@ -7,13 +7,34 @@ Accept-Encoding: br,deflate,gzip,x-gzip
 
 ###
 
-GET http://localhost:8080/products
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjU2OTc1LCJleHAiOjE3NjkzNDMzNzV9.ERwz1WjkXctHLqWDO6xb9kRAGTl3JT3KTfLuv7T-Obo
+GET http://localhost:8080/cart
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjY4NDUyLCJleHAiOjE3NjkzNTQ4NTJ9.tfWuRRgSHRhnQR68Z0I34LMg7Fwiap2a7W8q2E1o0-4
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
-<> 2026-01-24T131627.200.json
+<> 2026-01-24T162757.200.json
+
+###
+
+POST http://localhost:8080/cart/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjY4NDUyLCJleHAiOjE3NjkzNTQ4NTJ9.tfWuRRgSHRhnQR68Z0I34LMg7Fwiap2a7W8q2E1o0-4
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2026-01-24T162750.200.json
+
+###
+
+GET http://localhost:8080/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjY4NDUyLCJleHAiOjE3NjkzNTQ4NTJ9.tfWuRRgSHRhnQR68Z0I34LMg7Fwiap2a7W8q2E1o0-4
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2026-01-24T162744.200.json
 
 ###
 
@@ -29,12 +50,12 @@ Accept-Encoding: br,deflate,gzip,x-gzip
   "password": "password123"
 }
 
-<> 2026-01-24T131615.200.json
+<> 2026-01-24T162732.200.json
 
 ###
 
 POST http://localhost:8080/products
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJpYXQiOjE3NjkyNTY2NDksImV4cCI6MTc2OTM0MzA0OX0.9WmiHYMBvH5nhzKEKFtszlmq4Rr9eVJl_yS6Q_URWPc
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJpYXQiOjE3NjkyNjU3MjYsImV4cCI6MTc2OTM1MjEyNn0.LWk8RIaGEhCt25WLz1xpw_mUKY13Vlgi8slhegd-oi8
 Content-Type: application/json
 Content-Length: 256
 Connection: Keep-Alive
@@ -54,7 +75,106 @@ Accept-Encoding: br,deflate,gzip,x-gzip
   "rating": 4.5
 }
 
-<> 2026-01-24T131613.201.json
+<> 2026-01-24T162730.201.json
+
+###
+
+POST http://localhost:8080/account
+Content-Type: application/json
+Content-Length: 108
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "username": "client",
+  "firstname": "malek1",
+  "email": "user@test.com",
+  "password": "password123"
+}
+
+<> 2026-01-24T162724.200.txt
+
+###
+
+POST http://localhost:8080/wishlist/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjY4MzEyLCJleHAiOjE3NjkzNTQ3MTJ9.KBFTCT3DOuXH6Q_SYLTg4yuUq-FMf1m3fbWAycVLd3Q
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://localhost:8080/cart
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjY4MzEyLCJleHAiOjE3NjkzNTQ3MTJ9.KBFTCT3DOuXH6Q_SYLTg4yuUq-FMf1m3fbWAycVLd3Q
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2026-01-24T162600.200.json
+
+###
+
+POST http://localhost:8080/cart/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjY4MzEyLCJleHAiOjE3NjkzNTQ3MTJ9.KBFTCT3DOuXH6Q_SYLTg4yuUq-FMf1m3fbWAycVLd3Q
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2026-01-24T162536.200.json
+
+###
+
+GET http://localhost:8080/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjY4MzEyLCJleHAiOjE3NjkzNTQ3MTJ9.KBFTCT3DOuXH6Q_SYLTg4yuUq-FMf1m3fbWAycVLd3Q
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2026-01-24T162523.200.json
+
+###
+
+POST http://localhost:8080/token
+Content-Type: application/json
+Content-Length: 59
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "user@test.com",
+  "password": "password123"
+}
+
+<> 2026-01-24T162512.200.json
+
+###
+
+POST http://localhost:8080/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJpYXQiOjE3NjkyNjU3MjYsImV4cCI6MTc2OTM1MjEyNn0.LWk8RIaGEhCt25WLz1xpw_mUKY13Vlgi8slhegd-oi8
+Content-Type: application/json
+Content-Length: 256
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "code": "P1001",
+  "name": "Clavier Gamer",
+  "description": "Clavier mécanique RGB",
+  "category": "Electronics",
+  "price": 89.99,
+  "quantity": 50,
+  "internalReference": "REF-001",
+  "shellId": 12,
+  "inventoryStatus": "INSTOCK",
+  "rating": 4.5
+}
+
+<> 2026-01-24T162510.201.json
 
 ###
 
@@ -70,7 +190,7 @@ Accept-Encoding: br,deflate,gzip,x-gzip
   "password": "adminpassword"
 }
 
-<> 2026-01-24T131611.200.json
+<> 2026-01-24T162503.200.json
 
 ###
 
@@ -88,47 +208,7 @@ Accept-Encoding: br,deflate,gzip,x-gzip
   "password": "adminpassword"
 }
 
-<> 2026-01-24T131609.200.txt
-
-###
-
-POST http://localhost:8080/token
-Content-Type: application/json
-Content-Length: 63
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email": "admin@admin.com",
-  "password": "adminpassword"
-}
-
-###
-
-GET http://localhost:8080/products
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjU2NjgyLCJleHAiOjE3NjkzNDMwODJ9.n0p7A0m6Dy7hVh9boYVEIKeDSHdwwzsKfwi6M2fDr0w
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2026-01-24T131600.200.json
-
-###
-
-POST http://localhost:8080/token
-Content-Type: application/json
-Content-Length: 59
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email": "user@test.com",
-  "password": "password123"
-}
-
-<> 2026-01-24T131550.200.json
+<> 2026-01-24T162501.200.txt
 
 ###
 
@@ -146,54 +226,39 @@ Accept-Encoding: br,deflate,gzip,x-gzip
   "password": "password123"
 }
 
-<> 2026-01-24T131543.200.txt
-
-###
-
-POST http://localhost:8080/token
-Content-Type: application/json
-Content-Length: 59
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email": "user@test.com",
-  "password": "password123"
-}
-
-###
-
-GET http://localhost:8080/products
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjU2NjgyLCJleHAiOjE3NjkzNDMwODJ9.n0p7A0m6Dy7hVh9boYVEIKeDSHdwwzsKfwi6M2fDr0w
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2026-01-24T131531.200.json
-
-###
-
-GET http://localhost:8080/cart
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjU2NTA1LCJleHAiOjE3NjkzNDI5MDV9.KrvdMjtpta737TJ8KlTZhhWUMWK09YulHH0xVtt00RY
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-###
-
-GET http://localhost:8080/products
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjU2NjgyLCJleHAiOjE3NjkzNDMwODJ9.n0p7A0m6Dy7hVh9boYVEIKeDSHdwwzsKfwi6M2fDr0w
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2026-01-24T131520.200.json
+<> 2026-01-24T162459.200.txt
 
 ###
 
 POST http://localhost:8080/cart/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjU2NjgyLCJleHAiOjE3NjkzNDMwODJ9.n0p7A0m6Dy7hVh9boYVEIKeDSHdwwzsKfwi6M2fDr0w
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjY3ODkyLCJleHAiOjE3NjkzNTQyOTJ9.1Dxk5siXN-UXQPKqk0pCgI0MZeMfPUX6318UKlBiY9M
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+POST http://localhost:8080/cart/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjY3ODkyLCJleHAiOjE3NjkzNTQyOTJ9.1Dxk5siXN-UXQPKqk0pCgI0MZeMfPUX6318UKlBiY9M
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+POST http://localhost:8080/cart/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjY3ODkyLCJleHAiOjE3NjkzNTQyOTJ9.1Dxk5siXN-UXQPKqk0pCgI0MZeMfPUX6318UKlBiY9M
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+POST http://localhost:8080/cart/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjY3ODkyLCJleHAiOjE3NjkzNTQyOTJ9.1Dxk5siXN-UXQPKqk0pCgI0MZeMfPUX6318UKlBiY9M
 Content-Length: 0
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
@@ -202,37 +267,12 @@ Accept-Encoding: br,deflate,gzip,x-gzip
 ###
 
 GET http://localhost:8080/products
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjU2NjgyLCJleHAiOjE3NjkzNDMwODJ9.n0p7A0m6Dy7hVh9boYVEIKeDSHdwwzsKfwi6M2fDr0w
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjY3ODkyLCJleHAiOjE3NjkzNTQyOTJ9.1Dxk5siXN-UXQPKqk0pCgI0MZeMfPUX6318UKlBiY9M
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
-<> 2026-01-24T131212.200.json
-
-###
-
-GET http://localhost:8080/products
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjU2NjgyLCJleHAiOjE3NjkzNDMwODJ9.n0p7A0m6Dy7hVh9boYVEIKeDSHdwwzsKfwi6M2fDr0w
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2026-01-24T131147.200.json
-
-###
-
-POST http://localhost:8080/products
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjU2NjgyLCJleHAiOjE3NjkzNDMwODJ9.n0p7A0m6Dy7hVh9boYVEIKeDSHdwwzsKfwi6M2fDr0w
-Content-Type: application/json
-Content-Length: 39
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "code": "FRAUD",
-  "name": "Hack"
-}
+<> 2026-01-24T161824.200.json
 
 ###
 
@@ -248,12 +288,66 @@ Accept-Encoding: br,deflate,gzip,x-gzip
   "password": "password123"
 }
 
-<> 2026-01-24T131122.200.json
+<> 2026-01-24T161812.200.json
+
+###
+
+POST http://localhost:8080/cart/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjY3ODQxLCJleHAiOjE3NjkzNTQyNDF9.WT7pIVP_SS-N15gcdd7evOD9zoo3GrtDlRgqneX_9SE
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://localhost:8080/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjY3ODQxLCJleHAiOjE3NjkzNTQyNDF9.WT7pIVP_SS-N15gcdd7evOD9zoo3GrtDlRgqneX_9SE
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2026-01-24T161740.200.json
+
+###
+
+POST http://localhost:8080/cart/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjY3ODQxLCJleHAiOjE3NjkzNTQyNDF9.WT7pIVP_SS-N15gcdd7evOD9zoo3GrtDlRgqneX_9SE
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://localhost:8080/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjY3ODQxLCJleHAiOjE3NjkzNTQyNDF9.WT7pIVP_SS-N15gcdd7evOD9zoo3GrtDlRgqneX_9SE
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2026-01-24T161730.200.json
+
+###
+
+POST http://localhost:8080/token
+Content-Type: application/json
+Content-Length: 59
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "user@test.com",
+  "password": "password123"
+}
+
+<> 2026-01-24T161721.200.json
 
 ###
 
 POST http://localhost:8080/products
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJpYXQiOjE3NjkyNTY2NDksImV4cCI6MTc2OTM0MzA0OX0.9WmiHYMBvH5nhzKEKFtszlmq4Rr9eVJl_yS6Q_URWPc
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJpYXQiOjE3NjkyNjU3MjYsImV4cCI6MTc2OTM1MjEyNn0.LWk8RIaGEhCt25WLz1xpw_mUKY13Vlgi8slhegd-oi8
 Content-Type: application/json
 Content-Length: 256
 Connection: Keep-Alive
@@ -273,32 +367,7 @@ Accept-Encoding: br,deflate,gzip,x-gzip
   "rating": 4.5
 }
 
-<> 2026-01-24T131117.201.json
-
-###
-
-POST http://localhost:8080/products
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJpYXQiOjE3NjkyNTY2NDksImV4cCI6MTc2OTM0MzA0OX0.9WmiHYMBvH5nhzKEKFtszlmq4Rr9eVJl_yS6Q_URWPc
-Content-Type: application/json
-Content-Length: 256
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "code": "P1001",
-  "name": "Clavier Gamer",
-  "description": "Clavier mécanique RGB",
-  "category": "Electronics",
-  "price": 89.99,
-  "quantity": 50,
-  "internalReference": "REF-001",
-  "shellId": 12,
-  "inventoryStatus": "INSTOCK",
-  "rating": 4.5
-}
-
-<> 2026-01-24T131104.201.json
+<> 2026-01-24T161718.201.json
 
 ###
 
@@ -314,7 +383,7 @@ Accept-Encoding: br,deflate,gzip,x-gzip
   "password": "adminpassword"
 }
 
-<> 2026-01-24T131049.200.json
+<> 2026-01-24T161717.200.json
 
 ###
 
@@ -332,7 +401,7 @@ Accept-Encoding: br,deflate,gzip,x-gzip
   "password": "adminpassword"
 }
 
-<> 2026-01-24T131046.200.txt
+<> 2026-01-24T161715.200.txt
 
 ###
 
@@ -350,14 +419,7 @@ Accept-Encoding: br,deflate,gzip,x-gzip
   "password": "password123"
 }
 
-###
-
-POST http://localhost:8080/cart/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjU2NjIwLCJleHAiOjE3NjkzNDMwMjB9.cZ0S-SqRAQgiAI_vS9uREbrLKrtb4AQSPSIJJJVUQz8
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
-Accept-Encoding: br,deflate,gzip,x-gzip
+<> 2026-01-24T161713.200.txt
 
 ###
 
@@ -373,7 +435,129 @@ Accept-Encoding: br,deflate,gzip,x-gzip
   "password": "password123"
 }
 
-<> 2026-01-24T131020.200.json
+###
+
+GET http://localhost:8080/cart
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjY2NzUzLCJleHAiOjE3NjkzNTMxNTN9.bdlbuiv1I6s6oOizt-kZG0WjBKn_0QNgM42KOpDBzFc
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://localhost:8080/cart
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjY2NzUzLCJleHAiOjE3NjkzNTMxNTN9.bdlbuiv1I6s6oOizt-kZG0WjBKn_0QNgM42KOpDBzFc
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2026-01-24T160528.200.json
+
+###
+
+GET http://localhost:8080/cart
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjY2NzUzLCJleHAiOjE3NjkzNTMxNTN9.bdlbuiv1I6s6oOizt-kZG0WjBKn_0QNgM42KOpDBzFc
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2026-01-24T160047.200.json
+
+###
+
+POST http://localhost:8080/cart/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjY2NzUzLCJleHAiOjE3NjkzNTMxNTN9.bdlbuiv1I6s6oOizt-kZG0WjBKn_0QNgM42KOpDBzFc
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2026-01-24T160008.200.json
+
+###
+
+GET http://localhost:8080/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjY2NzUzLCJleHAiOjE3NjkzNTMxNTN9.bdlbuiv1I6s6oOizt-kZG0WjBKn_0QNgM42KOpDBzFc
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2026-01-24T155923.200.json
+
+###
+
+POST http://localhost:8080/token
+Content-Type: application/json
+Content-Length: 59
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "user@test.com",
+  "password": "password123"
+}
+
+<> 2026-01-24T155913.200.json
+
+###
+
+POST http://localhost:8080/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJpYXQiOjE3NjkyNjU3MjYsImV4cCI6MTc2OTM1MjEyNn0.LWk8RIaGEhCt25WLz1xpw_mUKY13Vlgi8slhegd-oi8
+Content-Type: application/json
+Content-Length: 256
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "code": "P1001",
+  "name": "Clavier Gamer",
+  "description": "Clavier mécanique RGB",
+  "category": "Electronics",
+  "price": 89.99,
+  "quantity": 50,
+  "internalReference": "REF-001",
+  "shellId": 12,
+  "inventoryStatus": "INSTOCK",
+  "rating": 4.5
+}
+
+<> 2026-01-24T155908.201.json
+
+###
+
+POST http://localhost:8080/token
+Content-Type: application/json
+Content-Length: 63
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "admin@admin.com",
+  "password": "adminpassword"
+}
+
+<> 2026-01-24T155858.200.json
+
+###
+
+POST http://localhost:8080/account
+Content-Type: application/json
+Content-Length: 110
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "username": "admin",
+  "firstname": "Admin",
+  "email": "admin@admin.com",
+  "password": "adminpassword"
+}
+
+<> 2026-01-24T155855.200.txt
 
 ###
 
@@ -391,26 +575,32 @@ Accept-Encoding: br,deflate,gzip,x-gzip
   "password": "password123"
 }
 
-<> 2026-01-24T131015.200.txt
+<> 2026-01-24T155847.200.txt
 
 ###
 
-POST http://localhost:8080/token
-Content-Type: application/json
-Content-Length: 59
+GET http://localhost:8080/cart
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJpYXQiOjE3NjkyNjY0MzgsImV4cCI6MTc2OTM1MjgzOH0.ughNLwJh-XoK2xItKZKQbT1lNGZYy5cv01epiyybQog
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
-{
-  "email": "user@test.com",
-  "password": "password123"
-}
+<> 2026-01-24T155652.200.json
+
+###
+
+GET http://localhost:8080/cart
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJpYXQiOjE3NjkyNjY0MzgsImV4cCI6MTc2OTM1MjgzOH0.ughNLwJh-XoK2xItKZKQbT1lNGZYy5cv01epiyybQog
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2026-01-24T155430.200.json
 
 ###
 
 POST http://localhost:8080/cart/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjU2NTA1LCJleHAiOjE3NjkzNDI5MDV9.KrvdMjtpta737TJ8KlTZhhWUMWK09YulHH0xVtt00RY
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJpYXQiOjE3NjkyNjY0MzgsImV4cCI6MTc2OTM1MjgzOH0.ughNLwJh-XoK2xItKZKQbT1lNGZYy5cv01epiyybQog
 Content-Length: 0
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
@@ -419,67 +609,71 @@ Accept-Encoding: br,deflate,gzip,x-gzip
 ###
 
 GET http://localhost:8080/products
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjU2NTA1LCJleHAiOjE3NjkzNDI5MDV9.KrvdMjtpta737TJ8KlTZhhWUMWK09YulHH0xVtt00RY
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJpYXQiOjE3NjkyNjY0MzgsImV4cCI6MTc2OTM1MjgzOH0.ughNLwJh-XoK2xItKZKQbT1lNGZYy5cv01epiyybQog
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
-<> 2026-01-24T130948.200.json
+<> 2026-01-24T155414.200.json
 
 ###
 
-GET http://localhost:8080/cart
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjU2NTA1LCJleHAiOjE3NjkzNDI5MDV9.KrvdMjtpta737TJ8KlTZhhWUMWK09YulHH0xVtt00RY
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2026-01-24T130911.200.json
-
-###
-
-GET http://localhost:8080/cart
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjU2MjYzLCJleHAiOjE3NjkzNDI2NjN9.Ql869ve9KLuCahzyPN1FXUHWRC7vHB9nPAQ3LU_fdtY
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2026-01-24T130903.200.json
-
-###
-
-POST http://localhost:8080/cart/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjU2NTA1LCJleHAiOjE3NjkzNDI5MDV9.KrvdMjtpta737TJ8KlTZhhWUMWK09YulHH0xVtt00RY
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-###
-
-GET http://localhost:8080/products
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjU2NTA1LCJleHAiOjE3NjkzNDI5MDV9.KrvdMjtpta737TJ8KlTZhhWUMWK09YulHH0xVtt00RY
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2026-01-24T130846.200.json
-
-###
-
-POST http://localhost:8080/token
+POST http://localhost:8080/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJpYXQiOjE3NjkyNjU3MjYsImV4cCI6MTc2OTM1MjEyNn0.LWk8RIaGEhCt25WLz1xpw_mUKY13Vlgi8slhegd-oi8
 Content-Type: application/json
-Content-Length: 59
+Content-Length: 256
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "email": "user@test.com",
-  "password": "password123"
+  "code": "P1001",
+  "name": "Clavier Gamer",
+  "description": "Clavier mécanique RGB",
+  "category": "Electronics",
+  "price": 89.99,
+  "quantity": 50,
+  "internalReference": "REF-001",
+  "shellId": 12,
+  "inventoryStatus": "INSTOCK",
+  "rating": 4.5
 }
 
-<> 2026-01-24T130825.200.json
+<> 2026-01-24T155405.201.json
+
+###
+
+POST http://localhost:8080/token
+Content-Type: application/json
+Content-Length: 63
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "email": "admin@admin.com",
+  "password": "adminpassword"
+}
+
+<> 2026-01-24T155358.200.json
+
+###
+
+POST http://localhost:8080/account
+Content-Type: application/json
+Content-Length: 110
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "username": "admin",
+  "firstname": "Admin",
+  "email": "admin@admin.com",
+  "password": "adminpassword"
+}
+
+<> 2026-01-24T155355.200.txt
 
 ###
 
@@ -497,152 +691,7 @@ Accept-Encoding: br,deflate,gzip,x-gzip
   "password": "password123"
 }
 
-<> 2026-01-24T130814.200.txt
-
-###
-
-POST http://localhost:8080/wishlist/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjU2MjYzLCJleHAiOjE3NjkzNDI2NjN9.Ql869ve9KLuCahzyPN1FXUHWRC7vHB9nPAQ3LU_fdtY
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-###
-
-GET http://localhost:8080/cart
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjU2MjYzLCJleHAiOjE3NjkzNDI2NjN9.Ql869ve9KLuCahzyPN1FXUHWRC7vHB9nPAQ3LU_fdtY
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-###
-
-POST http://localhost:8080/cart/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjU2MjYzLCJleHAiOjE3NjkzNDI2NjN9.Ql869ve9KLuCahzyPN1FXUHWRC7vHB9nPAQ3LU_fdtY
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-###
-
-POST http://localhost:8080/cart/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjU2MjYzLCJleHAiOjE3NjkzNDI2NjN9.Ql869ve9KLuCahzyPN1FXUHWRC7vHB9nPAQ3LU_fdtY
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-###
-
-POST http://localhost:8080/cart/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjU2MjYzLCJleHAiOjE3NjkzNDI2NjN9.Ql869ve9KLuCahzyPN1FXUHWRC7vHB9nPAQ3LU_fdtY
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-###
-
-GET http://localhost:8080/products
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjU2MjYzLCJleHAiOjE3NjkzNDI2NjN9.Ql869ve9KLuCahzyPN1FXUHWRC7vHB9nPAQ3LU_fdtY
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2026-01-24T130551.200.json
-
-###
-
-POST http://localhost:8080/cart/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjU2MjYzLCJleHAiOjE3NjkzNDI2NjN9.Ql869ve9KLuCahzyPN1FXUHWRC7vHB9nPAQ3LU_fdtY
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-###
-
-POST http://localhost:8080/wishlist/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjU2MjYzLCJleHAiOjE3NjkzNDI2NjN9.Ql869ve9KLuCahzyPN1FXUHWRC7vHB9nPAQ3LU_fdtY
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-###
-
-GET http://localhost:8080/cart
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjU2MjYzLCJleHAiOjE3NjkzNDI2NjN9.Ql869ve9KLuCahzyPN1FXUHWRC7vHB9nPAQ3LU_fdtY
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2026-01-24T130528.200.json
-
-###
-
-GET http://localhost:8080/cart
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjU1OTQzLCJleHAiOjE3NjkzNDIzNDN9.2Ayq6cZTyqes3Xc8mnpmpQMcifKtUT11HLtgmct-Mvg
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2026-01-24T130519.200.json
-
-###
-
-POST http://localhost:8080/cart/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjU2MjYzLCJleHAiOjE3NjkzNDI2NjN9.Ql869ve9KLuCahzyPN1FXUHWRC7vHB9nPAQ3LU_fdtY
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-###
-
-GET http://localhost:8080/products
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzY5MjU2MjYzLCJleHAiOjE3NjkzNDI2NjN9.Ql869ve9KLuCahzyPN1FXUHWRC7vHB9nPAQ3LU_fdtY
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2026-01-24T130437.200.json
-
-###
-
-POST http://localhost:8080/token
-Content-Type: application/json
-Content-Length: 59
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "email": "user@test.com",
-  "password": "password123"
-}
-
-<> 2026-01-24T130423.200.json
-
-###
-
-POST http://localhost:8080/account
-Content-Type: application/json
-Content-Length: 108
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "username": "client",
-  "firstname": "malek1",
-  "email": "user@test.com",
-  "password": "password123"
-}
-
-<> 2026-01-24T130416.200.txt
+<> 2026-01-24T155347.200.txt
 
 ###
 

@@ -40,7 +40,7 @@ public class JpaProductAdapter implements ProductRepositoryPort {
   }
 
 
-  private Product toDomain(ProductEntity e) {
+  Product toDomain(ProductEntity e) {
     Product p = new Product();
     p.setId(e.getId());
     p.setCode(e.getCode());
@@ -48,7 +48,7 @@ public class JpaProductAdapter implements ProductRepositoryPort {
     return p;
   }
 
-  private ProductEntity toEntity(Product p) {
+  ProductEntity toEntity(Product p) {
     ProductEntity e = new ProductEntity();
     e.setId(p.getId());
     e.setCode(p.getCode());

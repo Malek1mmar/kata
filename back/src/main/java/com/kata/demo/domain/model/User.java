@@ -19,6 +19,8 @@ public class User {
     this.firstname = firstname;
     this.email = email;
     this.password = password;
+    this.cart = new ArrayList<>();
+    this.wishlist = new ArrayList<>();
   }
 
   public Long getId() {
@@ -52,6 +54,9 @@ public class User {
 
   public void setId(Long id) { this.id = id; }
   public void setPassword(String password) { this.password = password; }
+
+  public void setCart(List<Product> cart) { this.cart = cart; }
+  public void setWishlist(List<Product> wishlist) { this.wishlist = wishlist; }
 
 
 }
