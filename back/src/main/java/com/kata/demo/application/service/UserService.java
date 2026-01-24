@@ -1,4 +1,4 @@
-package com.kata.demo.service;
+package com.kata.demo.application.service;
 
 import com.kata.demo.domain.model.User;
 import com.kata.demo.domain.ports.in.CreateAccountUseCase;
